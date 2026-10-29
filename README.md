@@ -64,7 +64,7 @@ npm run preview    # sirve dist/ localmente
 El proyecto se despliega desde GitHub. Railway ejecuta `npm install`, `npm run build` y `npm start`; el script `start` sirve `dist/` con [`serve`](https://www.npmjs.com/package/serve) en el puerto `$PORT`. El flag `-s` devuelve `index.html` en cualquier ruta, así que recargar en `/productos` o `/detalle/5` funciona.
 
 1. Entrar a [railway.com](https://railway.com) e iniciar sesión con GitHub.
-2. **New Project → Deploy from GitHub repo** y elegir `acnergmm/proyectofinalreact`. La primera vez hay que darle acceso a la GitHub App de Railway sobre el repo.
+2. **New Project → Deploy from GitHub repo** y elegir `acner999/proyectofinalreact`. La primera vez hay que darle acceso a la GitHub App de Railway sobre el repo.
 3. Esperar a que termine el build (pestaña **Deployments**).
 4. En el servicio: **Settings → Networking → Generate Domain**.
 5. Abrir la URL generada.
