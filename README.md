@@ -2,7 +2,7 @@
 
 SPA hecha con **React + Vite** que combina Hooks, React Router, consumo de una API REST y estilos con **TailwindCSS**. Los datos (productos y usuarios) vienen de la API pública [DummyJSON](https://dummyjson.com).
 
-**Demo:** _(pegar acá la URL de Railway)_
+**Demo:** https://acner999.github.io/proyectofinalreact/
 
 ## Funcionalidades
 
@@ -59,14 +59,12 @@ npm run build      # build de producción en dist/
 npm run preview    # sirve dist/ localmente
 ```
 
-## Deploy en Railway
+## Deploy en GitHub Pages
 
-El proyecto se despliega desde GitHub. Railway ejecuta `npm install`, `npm run build` y `npm start`; el script `start` sirve `dist/` con [`serve`](https://www.npmjs.com/package/serve) en el puerto `$PORT`. El flag `-s` devuelve `index.html` en cualquier ruta, así que recargar en `/productos` o `/detalle/5` funciona.
+Cada `git push` a `main` dispara la GitHub Action [`.github/workflows/deploy.yml`](.github/workflows/deploy.yml), que:
 
-1. Entrar a [railway.com](https://railway.com) e iniciar sesión con GitHub.
-2. **New Project → Deploy from GitHub repo** y elegir `acner999/proyectofinalreact`. La primera vez hay que darle acceso a la GitHub App de Railway sobre el repo.
-3. Esperar a que termine el build (pestaña **Deployments**).
-4. En el servicio: **Settings → Networking → Generate Domain**.
-5. Abrir la URL generada.
+1. Instala dependencias y compila con `GITHUB_PAGES=true`, lo que hace que Vite use `base: '/proyectofinalreact/'` (ver `vite.config.js`). React Router toma esa misma base con `basename={import.meta.env.BASE_URL}`.
+2. Copia `index.html` como `404.html`: GitHub Pages no conoce las rutas de la SPA, así que al recargar en `/detalle/5` sirve `404.html`, que es la misma app, y el Router muestra la página correcta.
+3. Publica `dist/` en https://acner999.github.io/proyectofinalreact/.
 
-Cada `git push` a `main` vuelve a desplegar automáticamente.
+El progreso se ve en la pestaña **Actions** del repositorio. En **Settings → Pages**, la fuente tiene que estar en **GitHub Actions**.
