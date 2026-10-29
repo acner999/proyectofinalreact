@@ -1,0 +1,15 @@
+/* Animación de entrada de cada página (Tailwind no trae un "fade-in" por defecto) */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.page-enter {
+  animation: fade-in 0.3s ease-out;
+}
