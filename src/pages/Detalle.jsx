@@ -39,7 +39,7 @@ export default function Detalle() {
       <div className="grid gap-10 lg:grid-cols-2">
         {/* Galería */}
         <div>
-          <div className="aspect-square overflow-hidden rounded-3xl border border-slate-200 bg-white">
+          <div className="aspect-square overflow-hidden rounded-3xl border border-slate-200 bg-red-200">
             <img
               src={product.images[selectedImage] ?? product.thumbnail}
               alt={product.title}
