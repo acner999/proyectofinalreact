@@ -23,7 +23,7 @@ export default function Home() {
       <section className="overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-500 to-violet-500 px-6 py-14 text-white shadow-xl sm:px-12 sm:py-20">
         <p className="text-sm font-semibold uppercase tracking-widest text-indigo-100">Proyecto final · React</p>
         <h1 className="mt-3 max-w-2xl text-4xl font-extrabold leading-tight sm:text-5xl">
-          Todo lo que necesitás, en una sola tienda.
+          Todo lo que necesitás, en una sola tienda de conveniencia
         </h1>
         <p className="mt-4 max-w-xl text-lg text-indigo-100">
           Explorá cientos de productos, filtrá por categoría y mirá el detalle de cada uno.
