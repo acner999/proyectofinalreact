@@ -39,7 +39,7 @@ export default function Home() {
             to="/login"
             className="rounded-xl border border-white/40 px-6 py-3 font-semibold text-white hover:bg-white/10"
           >
-            Ingresar
+            entrar
           </Link>
         </div>
       </section>
